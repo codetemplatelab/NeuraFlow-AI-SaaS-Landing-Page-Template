@@ -1,10 +1,10 @@
-﻿import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 import { SectionHeading } from '../components/SectionHeading'
 import { testimonials } from '../data/testimonials'
 
 export const TestimonialsSection = () => (
-  <section id="testimonials" className="section bg-slate-50 dark:bg-midnight">
+  <section id="testimonials" className="section bg-ink-50 dark:bg-midnight">
     <div className="mx-auto max-w-6xl px-6">
       <SectionHeading
         eyebrow="Testimonials"
@@ -19,15 +19,15 @@ export const TestimonialsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-white/10 dark:bg-white/5"
+            className="rounded-3xl border border-ink-200/60 bg-white p-6 shadow-soft dark:border-white/10 dark:bg-white/5"
           >
-            <div className="flex gap-1 text-ink-400">
+            <div className="flex gap-1 text-neon-400">
               {Array.from({ length: 5 }).map((_, starIndex) => (
                 <Star key={starIndex} size={16} fill="currentColor" />
               ))}
             </div>
             <p className="mt-5 text-sm text-slate-600 dark:text-slate-300">
-              “{testimonial.quote}”
+              "{testimonial.quote}"
             </p>
             <div className="mt-6">
               <p className="text-sm font-semibold text-slate-900 dark:text-white">
@@ -43,4 +43,3 @@ export const TestimonialsSection = () => (
     </div>
   </section>
 )
-

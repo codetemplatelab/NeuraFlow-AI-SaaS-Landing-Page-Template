@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { features } from '../data/features'
 import { iconMap } from '../constants/iconMap'
@@ -22,9 +22,9 @@ export const FeaturesSection = () => (
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -6 }}
-              className="group rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-soft transition-all dark:border-white/10 dark:bg-white/5"
+              className="group rounded-3xl border border-ink-200/60 bg-white/80 p-6 shadow-soft transition-all dark:border-white/10 dark:bg-white/5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-500/10 text-ink-400">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slateblue-500/10 text-slateblue-500">
                 {Icon && <Icon size={22} />}
               </div>
               <h3 className="mt-5 text-xl font-semibold text-slate-900 dark:text-white">
@@ -33,7 +33,7 @@ export const FeaturesSection = () => (
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
                 {feature.description}
               </p>
-              <div className="mt-6 h-1 w-12 rounded-full bg-ink-400/40 transition-all group-hover:w-20" />
+              <div className="mt-6 h-1 w-12 rounded-full bg-neon-400/70 transition-all group-hover:w-20" />
             </motion.div>
           )
         })}
@@ -41,4 +41,3 @@ export const FeaturesSection = () => (
     </div>
   </section>
 )
-

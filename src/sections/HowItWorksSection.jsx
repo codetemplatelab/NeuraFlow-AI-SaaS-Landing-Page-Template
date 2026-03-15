@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { iconMap } from '../constants/iconMap'
 
@@ -21,7 +21,7 @@ const steps = [
 ]
 
 export const HowItWorksSection = () => (
-  <section id="workflow" className="section bg-slate-50 dark:bg-midnight">
+  <section id="workflow" className="section bg-ink-50 dark:bg-midnight">
     <div className="mx-auto max-w-6xl px-6">
       <SectionHeading
         eyebrow="How it works"
@@ -38,9 +38,9 @@ export const HowItWorksSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-white/10 dark:bg-white/5"
+              className="relative rounded-3xl border border-ink-200/60 bg-white p-6 shadow-soft dark:border-white/10 dark:bg-white/5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-500/10 text-ink-400">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slateblue-500/10 text-slateblue-500">
                 {Icon && <Icon size={20} />}
               </div>
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -52,7 +52,7 @@ export const HowItWorksSection = () => (
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
                 {step.description}
               </p>
-              <span className="absolute right-6 top-6 text-4xl font-semibold text-slate-200 dark:text-white/10">
+              <span className="absolute right-6 top-6 text-4xl font-semibold text-ink-200/60 dark:text-white/10">
                 0{index + 1}
               </span>
             </motion.div>
@@ -62,4 +62,3 @@ export const HowItWorksSection = () => (
     </div>
   </section>
 )
-

@@ -10,7 +10,9 @@ import { HeroSection } from './sections/HeroSection'
 import { TrustedBySection } from './sections/TrustedBySection'
 import { FeaturesSection } from './sections/FeaturesSection'
 import { ProductDemoSection } from './sections/ProductDemoSection'
+import { UseCasesSection } from './sections/UseCasesSection'
 import { IntegrationsSection } from './sections/IntegrationsSection'
+import { MetricsSection } from './sections/MetricsSection'
 import { HowItWorksSection } from './sections/HowItWorksSection'
 import { PricingSection } from './sections/PricingSection'
 import { TestimonialsSection } from './sections/TestimonialsSection'
@@ -36,7 +38,9 @@ function App() {
           <TrustedBySection />
           <FeaturesSection />
           <ProductDemoSection />
+          <UseCasesSection />
           <IntegrationsSection />
+          <MetricsSection />
           <HowItWorksSection />
           <PricingSection />
           <TestimonialsSection />

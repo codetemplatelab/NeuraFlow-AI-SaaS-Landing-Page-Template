@@ -1,10 +1,10 @@
-﻿import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '../ui/Button'
 
 export const CtaSection = () => (
   <section className="section">
     <div className="mx-auto max-w-6xl px-6">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-10 shadow-soft dark:border-white/10 dark:bg-white/5">
+      <div className="relative overflow-hidden rounded-3xl border border-ink-200/60 bg-white/80 p-6 shadow-soft dark:border-white/10 dark:bg-white/5 sm:p-8 lg:p-10">
         <div className="absolute inset-0 bg-cta-glow opacity-70" />
         <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-4">
@@ -35,4 +35,3 @@ export const CtaSection = () => (
     </div>
   </section>
 )
-

@@ -1,4 +1,4 @@
-﻿import { Check } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { cn } from '../utils/cn'
 
@@ -7,13 +7,13 @@ export const PricingCard = ({ plan, selected, onSelect }) => (
     className={cn(
       'relative flex h-full flex-col rounded-3xl border bg-white/80 p-8 shadow-soft transition-all dark:bg-white/5',
       plan.highlight
-        ? 'border-ink-400/60 shadow-glow'
-        : 'border-slate-200 dark:border-white/10',
-      selected && 'ring-2 ring-ink-400/70',
+        ? 'border-slateblue-400/70 shadow-glow'
+        : 'border-ink-200/60 dark:border-white/10',
+      selected && 'ring-2 ring-neon-400/70',
     )}
   >
     {plan.highlight && (
-      <span className="absolute -top-3 left-8 rounded-full bg-ink-500 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+      <span className="absolute -top-3 left-8 rounded-full bg-slateblue-500 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
         Most Popular
       </span>
     )}
@@ -32,7 +32,7 @@ export const PricingCard = ({ plan, selected, onSelect }) => (
     <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
       {plan.features.map((feature) => (
         <li key={feature} className="flex items-start gap-3">
-          <Check size={16} className="mt-0.5 text-ink-400" />
+          <Check size={16} className="mt-0.5 text-neon-400" />
           {feature}
         </li>
       ))}
@@ -46,4 +46,3 @@ export const PricingCard = ({ plan, selected, onSelect }) => (
     </Button>
   </div>
 )
-

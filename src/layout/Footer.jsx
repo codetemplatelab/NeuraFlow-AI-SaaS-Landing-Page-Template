@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { socialLinks } from '../data/socials'
 import { navItems } from '../data/navigation'
 import { Button } from '../ui/Button'
@@ -20,11 +20,11 @@ export const Footer = () => {
   }
 
   return (
-    <footer className="border-t border-slate-200 bg-white/80 py-16 dark:border-white/10 dark:bg-white/5">
+    <footer className="border-t border-ink-200/60 bg-white/80 py-16 dark:border-white/10 dark:bg-white/5">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div className="space-y-4">
           <p className="text-xl font-semibold text-slate-900 dark:text-white">
-            NeuraFlow <span className="text-ink-400">AI</span>
+            NeuraFlow <span className="text-neon-400">AI</span>
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-300">
             Automate your workflows with AI-powered intelligence. Built for
@@ -35,7 +35,7 @@ export const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="transition hover:text-ink-400"
+                className="transition hover:text-neon-400"
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ export const Footer = () => {
           <ul className="space-y-2 text-slate-600 dark:text-slate-300">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={`#${item.href}`} className="hover:text-ink-400">
+                <a href={`#${item.href}`} className="hover:text-slateblue-600">
                   {item.label}
                 </a>
               </li>
@@ -71,7 +71,7 @@ export const Footer = () => {
               placeholder="you@company.com"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 shadow-sm outline-none focus:border-ink-300 dark:border-white/10 dark:bg-white/10 dark:text-white"
+              className="w-full rounded-full border border-ink-200/60 bg-white px-4 py-2 text-sm text-slate-900 shadow-sm outline-none focus:border-slateblue-300 dark:border-white/10 dark:bg-white/10 dark:text-white"
               required
             />
             <Button type="submit" variant="primary">
@@ -86,11 +86,10 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-slate-200 px-6 pt-6 text-xs text-slate-500 dark:border-white/10 dark:text-slate-400 sm:flex-row">
-        <span>© 2026 NeuraFlow AI. All rights reserved.</span>
+      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-start justify-between gap-4 border-t border-ink-200/60 px-6 pt-6 text-xs text-slate-500 dark:border-white/10 dark:text-slate-400 sm:flex-row">
+        <span>? 2026 NeuraFlow AI. All rights reserved.</span>
         <span>Built for premium SaaS launches.</span>
       </div>
     </footer>
   )
 }
-

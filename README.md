@@ -1,4 +1,4 @@
-﻿# NeuraFlow AI — AI SaaS Landing Page Template
+# NeuraFlow AI � AI SaaS Landing Page Template
 
 Premium, production-ready SaaS landing page template with pricing, integrations, animations, and 3D hero visuals. Built for founders, agencies, and developers who want a fast, modern launch.
 
@@ -9,6 +9,7 @@ Premium, production-ready SaaS landing page template with pricing, integrations,
 - Pricing plans + comparison table with localStorage selection
 - Testimonials, FAQ accordion, and conversion-focused CTA
 - Dark/light mode toggle with localStorage
+- Responsive navbar with overflow dropdown for secondary sections
 - Responsive, mobile-optimized layout
 - SEO-ready metadata and structured data
 
@@ -34,7 +35,7 @@ Premium, production-ready SaaS landing page template with pricing, integrations,
 ## Customization Guide
 - **Branding**: Update copy and data in `src/data` (features, pricing, testimonials, FAQs).
 - **Theme**: Adjust colors and fonts in `tailwind.config.js` and `src/styles/muiTheme.js`.
-- **Navigation**: Edit nav items in `src/data/navigation.js`.
+- **Navigation**: Edit nav items and grouping in `src/data/navigation.js` (`group: 'primary' | 'more'`).
 - **Hero 3D**: Tweak the 3D mesh in `src/components/Hero3D.jsx`.
 - **Integrations**: Update cards in `src/data/integrations.js`.
 - **Pricing**: Modify plan details in `src/data/pricing.js`.
@@ -71,4 +72,3 @@ src
 
 ---
 If you need help customizing the template for your product, feel free to reach out.
-

@@ -1,4 +1,4 @@
-﻿import {
+import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -21,13 +21,16 @@ export const FaqSection = () => (
           <Accordion
             key={faq.question}
             disableGutters
-            sx={{
+            sx={(theme) => ({
               backgroundColor: 'transparent',
               borderRadius: '20px',
-              border: '1px solid rgba(148,163,184,0.2)',
+              border:
+                theme.palette.mode === 'dark'
+                  ? '1px solid rgba(99,102,241,0.35)'
+                  : '1px solid rgba(99,102,241,0.2)',
               boxShadow: 'none',
               '&:before': { display: 'none' },
-            }}
+            })}
           >
             <AccordionSummary
               expandIcon={<ChevronDown size={18} />}
@@ -52,4 +55,3 @@ export const FaqSection = () => (
     </div>
   </section>
 )
-
