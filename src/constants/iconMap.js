@@ -1,0 +1,38 @@
+﻿import {
+  Bot,
+  LineChart,
+  Users,
+  GitBranch,
+  Plug,
+  Cpu,
+  MessageSquare,
+  CreditCard,
+  Zap,
+  BookOpen,
+  Folder,
+  Github,
+  Sparkles,
+  Shield,
+  Rocket,
+  Gauge,
+} from 'lucide-react'
+
+export const iconMap = {
+  Bot,
+  LineChart,
+  Users,
+  GitBranch,
+  Plug,
+  Cpu,
+  MessageSquare,
+  CreditCard,
+  Zap,
+  BookOpen,
+  Folder,
+  Github,
+  Sparkles,
+  Shield,
+  Rocket,
+  Gauge,
+}
+

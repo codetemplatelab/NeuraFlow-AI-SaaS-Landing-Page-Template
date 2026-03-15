@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --scroll-track: #e2e8f0;
+    --scroll-thumb: #7c88ff;
+    --scroll-thumb-hover: #5a60ff;
+    --scroll-thumb-gradient: linear-gradient(120deg, #4d7dff, #7c88ff, #a7b3ff);
+  }
+
+  .dark {
+    --scroll-track: #0f172a;
+    --scroll-thumb: #7c88ff;
+    --scroll-thumb-hover: #a7b3ff;
+    --scroll-thumb-gradient: linear-gradient(120deg, #5a60ff, #73a0ff, #a7b3ff);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-midnight dark:text-slate-100;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  }
+
+  #root {
+    @apply min-h-screen bg-transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-slate-900 dark:text-white;
+  }
+
+  p {
+    @apply text-slate-600 dark:text-slate-300;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-gradient);
+    border-radius: 999px;
+    border: 3px solid var(--scroll-track);
+    background-size: 200% 200%;
+    animation: scrollshift 6s ease infinite;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover);
+  }
+}
+
+@layer components {
+  .section {
+    @apply relative py-20 sm:py-24 lg:py-28;
+    scroll-margin-top: 120px;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold sm:text-4xl lg:text-5xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-white/10 bg-white/80 shadow-soft backdrop-blur dark:border-white/10 dark:bg-white/5;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-sm dark:border-white/10 dark:bg-white/10 dark:text-slate-200;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #4d7dff, #a7b3ff 45%, #73a0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-size: 32px 32px;
+    background-image: theme('backgroundImage.grid-lines');
+  }
+}
+
+@keyframes scrollshift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
